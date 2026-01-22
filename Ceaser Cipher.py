@@ -9,7 +9,7 @@ def caesar(text, shift, encrypt):
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
     if not encrypt:
-        shift = - shift
+        shift = -shift
     
     shifted_alphabet = alphabet[shift:] + alphabet[:shift]
     translation_table = str.maketrans(alphabet + alphabet.upper(), shifted_alphabet + shifted_alphabet.upper())
@@ -22,5 +22,8 @@ def encrypt(text, shift):
 def decrypt(text, shift):
     return caesar(text, shift, False)
     
-encrypted_text = encrypt('FreeCodeCamp', 3)
+Text=(input("Enter Text :")
+N=int(input("Enter a Shift Number :":))
+encrypted_text = encrypt(Text, N)
 print(encrypted_text)
+
