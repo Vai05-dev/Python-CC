@@ -25,5 +25,7 @@ def decrypt(text, shift):
 Text=(input("Enter Text :")
 N=int(input("Enter a Shift Number :":))
 encrypted_text = encrypt(Text, N)
+#decrypted_text = decrypt(Text,N)
 print(encrypted_text)
+
 
