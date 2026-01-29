@@ -1,0 +1,56 @@
+##Fibanocci1
+
+print(0)
+print(1)
+count = 2
+def fibonacci(prev1, prev2):
+    global count
+    if count <= 19:
+        newFibo = prev1 + prev2
+        print(newFibo)
+        prev2 = prev1
+        prev1 = newFibo
+        count += 1
+        fibonacci(prev1, prev2)
+    else:
+        return
+fibonacci(1,0)
+
+##Fibanocci2
+
+def F(n):
+    if n <= 1:
+        return n
+    else:
+        return F(n - 1) + F(n - 2)
+
+print(F(19))
+
+##Bubble Sort
+Bubble Sort is an algorithm that sorts an array from the lowest value to the highest value
+
+my_array = [7, 3, 9, 12, 11]
+n = len(my_array)
+for i in range(n-1):
+    swapped = False
+    for j in range(n-i-1):
+        if my_array[j] > my_array[j+1]:
+            my_array[j], my_array[j+1] = my_array[j+1], my_array[j]
+            swapped = True
+    if not swapped:
+        break
+print("Sorted array:", my_array)
+
+##Selection Sort
+The Selection Sort algorithm finds the lowest value in an array and moves it to the front of the array.
+
+my_array = [64, 34, 25, 12, 22, 11, 90, 5]
+n = len(my_array)
+for i in range(n):
+    min_index = i
+    for j in range(i+1, n):
+        if my_array[j] < my_array[min_index]:
+            min_index = j   
+    my_array[i], my_array[min_index] = my_array[min_index], my_array[i]
+
+print("Sorted array:", my_array)
