@@ -1,0 +1,1 @@
+T=input("Enter Text :")
